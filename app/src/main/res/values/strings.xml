@@ -1,4 +1,5 @@
 <resources>
+    <string name="app_name">week2T01</string>
     <string name="btn1">FOLLOW</string>
     <string name="btn2">MESSAGE</string>
 </resources>
