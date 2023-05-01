@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Practical 2</string>
+    <string name="btn1">FOLLOW</string>
+    <string name="btn2">MESSAGE</string>
 </resources>
