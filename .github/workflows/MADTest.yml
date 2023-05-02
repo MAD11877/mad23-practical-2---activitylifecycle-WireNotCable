@@ -2,15 +2,15 @@ name: MAD Practical Test
 on:
   push:
     branches: [main]
-    
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout Source Codes
         uses: actions/checkout@v2
-        
+
       - name: Checkout Test Scripts
         uses: actions/checkout@v2
         with:
@@ -18,19 +18,19 @@ jobs:
           path: testDirectory
       - name: Check files
         run: |
-            ls
+          ls
       - name: Create Test Files
         run: |
           cp app/src/main/res/layout/activity_main.xml testDirectory/test.xml
-          cp testDirectory/Practice2Test.java app/src/test/java/sg/edu/np/mad/madpractical/UserTest.java
+          cp testDirectory/Practice2Test.java app/src/test/java/sg/edu/np/mad/practical2/UserTest.java
           ls
-          cd app/src/test/java/sg/edu/np/mad/madpractical
+          cd app/src/test/java/sg/edu/np/mad/practical2
           ls
           cd \
       - name: Setup go
         uses: actions/setup-go@v2
         with:
-          go-version: '1.13.7'
+          go-version: "1.13.7"
       - name: Run XML Test
         run: |
           ls
@@ -38,9 +38,9 @@ jobs:
           go test -v
       - name: Make gradlew executable
         run: chmod +x ./gradlew
-  
+
       - name: Run Android Tests
         run: ./gradlew test
-        
+
       - name: Build Project
         run: ./gradlew assemble
