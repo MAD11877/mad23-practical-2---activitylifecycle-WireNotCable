@@ -28,29 +28,4 @@ public class MainActivity extends AppCompatActivity {
             followBtn.setText(user.followed ? "UNFOLLOW" : "FOLLOW");
         });
     }
-
-    /*@Override
-    protected void onStart(){
-        super.onStart();
-        Log.v(TAG, "on start!!");
-        User user = new User ("XinYin", "helloworld", 1, true);
-
-        Button followBtn = findViewById(R.id.button);
-        /*followBtn.setOnClickListener(new View.OnClickListener() {
-
-
-            @Override
-            public void onClick(View v) {
-                Log.v(TAG,"HELLO");
-                if (followBtn.getText() == "FOLLOW"){
-                    Log.v(TAG,"follow");
-                    followBtn.setText("UNFOLLOW");
-                }
-                else{
-                    Log.v(TAG,"unfollow");
-                    followBtn.setText("FOLLOW");
-                }
-            }
-        });
-    }*/
 }
