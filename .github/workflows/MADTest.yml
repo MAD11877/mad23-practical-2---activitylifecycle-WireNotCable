@@ -40,7 +40,16 @@ jobs:
         run: chmod +x ./gradlew
 
       - name: Run Android Tests
+        uses: actions/setup-java@v3
+        with:
+          java-version: "17"
+          distribution: "semeru"
         run: ./gradlew test
+        
 
       - name: Build Project
+        uses: actions/setup-java@v3
+        with:
+          java-version: "17"
+          distribution: "semeru"
         run: ./gradlew assemble
