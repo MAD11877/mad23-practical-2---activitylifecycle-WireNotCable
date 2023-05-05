@@ -45,7 +45,6 @@ jobs:
           java-version: "17"
           distribution: "semeru"
         run: ./gradlew test
-        
 
       - name: Build Project
         uses: actions/setup-java@v3
