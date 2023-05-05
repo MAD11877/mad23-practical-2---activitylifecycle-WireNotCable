@@ -15,12 +15,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         User user = new User ("XinYin", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua bfhewjdqwfbehqdwnkjbfehdwkdjbcqdwnjbfhewjdqwfbehqdwnkjbfehdwkdjbcqdwnjbfhewjdqwfbehqdwnkjbfehdwkdjbcqdwnjbfhewjdqwfbehqdwnkjbfehdwkdjbcqdwnjbfhewjdqwfbehqdwnkjbfehdwkdjbcqdwnjbfhewjdqwfbehqdwnkjbfehdwkdjbcqdwnj.", 1, true);
 
+        // get name
         TextView name = findViewById(R.id.textView2);
         name.setText(user.name);
 
+        // get desc
         TextView desc = findViewById(R.id.textView);
         desc.setText((user.description));
 
+        // toggle follow & unfollow button
         Button followBtn = findViewById(R.id.button);
         followBtn.setOnClickListener(v -> {
             user.followed = !user.followed;
